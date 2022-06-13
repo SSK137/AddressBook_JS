@@ -58,7 +58,7 @@ class AddressBook{
 
     get zip(){ return this._zip; }
     set zip(zip){ 
-    let zipRegex =RegExp('^[0-9]{6}?$');
+    let zipRegex =RegExp('^[0-9]{6}$');
     if(zipRegex.test(zip))    
         this._zip = zip; 
     else
@@ -82,11 +82,8 @@ class AddressBook{
     }
   
     toString(){
-        return "firstName : "+this.firstName+"\nlastName : "+this.lastName+"\naddress :"+this.address+
-        "\ncity :"+this.city+"\nstate :"+this.state+"\nzip : "+this.zip+"\nphoneNumber:"+this.phoneNumber+"\nemail:"+this.email;
-    }
-    getname(){
-        return "Name : "+this.firstName
+        return "\nfirstName : "+this.firstName+"\nlastName : "+this.lastName+"\naddress : "+this.address+
+        "\ncity : "+this.city+"\nstate : "+this.state+"\nzip-code : "+this.zip+"\nphoneNumber : "+this.phoneNumber+"\nEmail-Id : "+this.email;
     }
 }
 try{
@@ -162,7 +159,7 @@ try{
     }
 //Email    
 try{
-    let addressBook = new AddressBook("Saurabh","Bhokare","Baramati","Pune","Maharashtra",76123,919762689841,"email.@23@example.com");
+    let addressBook = new AddressBook("Saurabh","Kodam","Savedi","Ahmednagar","Maharashtra",414003,918329294765,"saurabhkodam@gmail.com");
     console.log(addressBook.toString());
     }
     catch(e){
